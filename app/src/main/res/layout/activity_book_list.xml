@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:visibility="gone"
+        android:scrollbars="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:tabMode="scrollable" />
+    <RelativeLayout
+        android:id="@+id/rel_subcat"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBarLayout">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablist"
+            android:background="@color/colorPrimary"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/white"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white" />
+        <com.essensys.cashsaverz.helper.CustomViewPager
+            android:id="@+id/view_subcat"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tablist" />
+        <LinearLayout android:orientation="horizontal"
+            android:id="@+id/lin_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/white"
+                android:id="@+id/txt_Allsubcat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10dp"
+                android:text="ALL" />
+            <View android:background="@color/white"
+                android:layout_width="0.5dp"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginTop="8.0dip" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:orientation="horizontal"
+            android:id="@+id/recycl_subCategory"
+            android:background="@color/colorPrimary"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@id/lin_all" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:orientation="vertical"
+        android:id="@id/recyclerView"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/elementMarginSmall"
+        android:layout_below="@id/rel_subcat" />
+    <TextView
+        android:textSize="@dimen/textSizeSmall"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:id="@+id/tvEmptyMessage"
+        android:padding="@dimen/dimen_10dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/put_new_book_request"
+        android:layout_above="@id/tvEmptyList"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:textSize="@dimen/textSizeMedium"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:id="@+id/tvEmptyList"
+        android:padding="@dimen/dimen_10dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_available"
+        android:layout_centerInParent="true" />
+</RelativeLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    >-->
+<!--    -->
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/appBarLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?android:attr/actionBarSize"-->
+<!--            android:background="@color/colorPrimary"-->
+<!--            app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/appBarLayout"-->
+<!--        android:layout_margin="@dimen/elementMarginSmall" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvEmptyMessage"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/tvEmptyList"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:gravity="center"-->
+<!--        android:visibility="gone"-->
+<!--        android:text="@string/put_new_book_request"-->
+<!--        android:padding="@dimen/dimen_10dp"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:textSize="@dimen/textSizeSmall" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/tvEmptyList"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:gravity="center"-->
+<!--        android:visibility="gone"-->
+<!--        android:text="@string/no_data_available"-->
+<!--        android:padding="@dimen/dimen_10dp"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:textSize="@dimen/textSizeMedium" />-->
+
+
+<!--</RelativeLayout>-->

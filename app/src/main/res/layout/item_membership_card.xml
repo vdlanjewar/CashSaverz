@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMembership"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    card_view:cardBackgroundColor="@color/colorWhite"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llTitleBackground"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorLightBlue"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPlanName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLASSIC"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/elementMarginMedium"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
+                android:text="@string/rupee"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/tvPlanPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="5dp"
+                android:text="2500"
+                android:textColor="@color/black"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPlanDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/elementMarginSmall"
+            android:gravity="center"
+            android:text="1 year subscription."
+            android:textColor="@color/colorDarkGray"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/vDivider"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/elementMarginSmall"
+            android:background="@color/colorLightBlue" />
+
+        <TextView
+            android:id="@+id/tvPlanDescription2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/elementMarginSmall"
+            android:gravity="center"
+            android:text="1 year subscription."
+            android:textColor="@color/colorDarkGray"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/vDivider2"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/elementMarginSmall"
+            android:background="@color/colorLightBlue" />
+
+        <TextView
+            android:id="@+id/tvPlanDescription3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/elementMarginSmall"
+            android:gravity="center"
+            android:text="1 year subscription."
+            android:textColor="@color/colorDarkGray"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/vDivider3"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/elementMarginSmall"
+            android:background="@color/colorLightBlue" />
+
+    <LinearLayout
+        android:id="@+id/llSecurityDepositInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvSecurityDepositInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/elementMarginSmall"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorDarkGray"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/vDivider4"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/elementMarginSmall"
+            android:background="@color/colorLightBlue" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/elementMarginSmall"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPlanOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/elementMarginSmall"
+                android:gravity="center"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elementMarginSmall"
+                android:background="@color/colorLightBlue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPlanExpire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/elementMarginSmall"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPlanExpire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/elementMarginSmall"
+                android:gravity="center"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elementMarginSmall"
+                android:background="@color/colorLightBlue" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btSelectPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/elementMarginLarge"
+            android:background="@drawable/button_yellow"
+            android:padding="@dimen/elementPaddingMedium"
+            android:text="Select Plan"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/ivActivePlan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/check_mark" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,46 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="profile_width">75dp</dimen>
+    <dimen name="profile_height">75dp</dimen>
+    <dimen name="button_margin">8dp</dimen>
+
+    <!--Screen elements generic dimens-->
+    <dimen name="elementMarginUltraSmall">3dp</dimen>
+    <dimen name="elementMarginSmall">6dp</dimen>
+    <dimen name="elementMarginMedium">16dp</dimen>
+    <dimen name="elementPaddingSmall">8dp</dimen>
+    <dimen name="elementPaddingMedium">15dp</dimen>
+    <dimen name="elementPaddingLarge">20dp</dimen>
+    <dimen name="statusViewHeight">100dp</dimen>
+
+    <!--<dimen name="selectorWidth">300dp</dimen>-->
+    <dimen name="selectorMargin">10dp</dimen>
+    <!--<dimen name="selectorHeight">140dp</dimen>-->
+    <dimen name="cardElevationRegular">8dp</dimen>
+    <dimen name="elementMarginLarge">32dp</dimen>
+    <dimen name="listDividerHeightLarge">30dp</dimen>
+    <dimen name="buttonHeightSmall">24dp</dimen>
+    <dimen name="buttonHeightMedium">48dp</dimen>
+    <dimen name="buttonHeightLarge">50dp</dimen>
+    <dimen name="buttonHeightXLarge">70dp</dimen>
+    <dimen name="buttonHeight">30dp</dimen>
+    <dimen name="buttonWidth">165dp</dimen>
+    <dimen name="buttonWidthLarge">200dp</dimen>
+
+    <!--Text Sizes-->
+    <dimen name="textSizeXLarge">28sp</dimen>
+    <dimen name="textSizeXSmall">22sp</dimen>
+    <dimen name="textSizeLarge">20sp</dimen>
+    <dimen name="textSizeMedium">16sp</dimen>
+    <dimen name="textSizeSmall">14sp</dimen>
+    <dimen name="textSizeUltraSmall">12sp</dimen>
+
+</resources>

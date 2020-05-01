@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:background="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_bck_order"
+            android:layout_width="35dp"
+            android:layout_height="@dimen/dimen_35dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/img_back_arrow" />
+        <TextView
+            android:textSize="@dimen/dimen_18dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Order Summary" />
+        <FrameLayout android:id="@+id/frame_ordersum"
+            android:focusable="true"
+            android:clipToPadding="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" style="?actionButtonStyle"
+            >
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cart" />
+            <TextView
+                android:textSize="10sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_gravity="end|center|top"
+                android:id="@+id/cart_badgeOrder"
+                android:background="@drawable/badge_background" android:padding="3.0dip" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="-5.0dip" android:text="0" android:layout_marginEnd="-5.0dip" />
+        </FrameLayout>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="6dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="@dimen/dimen_18sp" android:textColor="@color/color_3" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5dp" android:text="Delivery Address" android:fontFamily="sans-serif" />
+                    <View
+                        android:background="@color/colorGray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" />
+                    <TextView
+                        android:textSize="@dimen/dimen_16sp" android:textColor="@color/colorDarkGray" android:id="@+id/txt_orderAdd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_10dp" android:text=" Delivery Address" android:fontFamily="sans-serif" />
+                    <Button android:textSize="@dimen/dimen_16sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/btn_chngAdd" android:background="@color/colorButtonRed" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginLeft="@dimen/dimen_20dp" android:layout_marginTop="@dimen/dimen_30dp" android:layout_marginRight="@dimen/dimen_20dp" android:layout_marginBottom="@dimen/dimen_10dp" android:text="Change Address" android:textAllCaps="true" android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" app:cardBackgroundColor="@color/colorGray" app:cardCornerRadius="4.0dip" app:cardElevation="4.0dip">
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyOrder" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:orientation="vertical" android:id="@+id/linear_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                            <ImageView android:id="@+id/ivRemove" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:src="@drawable/ic_remove" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip">
+                        <LinearLayout android:layout_gravity="center_vertical" android:id="@id/ivBook" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_alignTop="@id/llData" android:layout_alignBottom="@id/llData">
+                            <ImageView android:id="@id/ivBookImage" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/llData" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_toRightOf="@id/ivBook">
+                            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <TextView android:textSize="14.0sp" android:textColor="@color/colorPrimary" android:id="@id/tv_prodName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="zxcxccxcc" android:singleLine="false" />
+                                <TextView android:textSize="14.0sp" android:textColor="@color/colorGray1" android:id="@id/tv_BrandMyCart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="" android:singleLine="false" />
+                                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+                                    <TextView android:textSize="14.0sp" android:textColor="@color/colorPrimary" android:ellipsize="end" android:id="@id/tv_priceMycart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:text="cxcx" android:singleLine="true" />
+                                    <TextView android:textSize="14.0sp" android:textColor="@color/colorGray1" android:ellipsize="end" android:id="@id/tv_mrpMycart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_2dp" android:text="cxcx" android:singleLine="true" android:layout_toRightOf="@id/tv_priceMycart" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <TextView android:textColor="@color/colorPrimary" android:ellipsize="end" android:layout_gravity="center" android:id="@id/tv_itemsizeMyCart" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text=" dfddddddddd" android:singleLine="true" android:layout_weight="0.3" />
+                                <LinearLayout android:gravity="center_vertical" android:background="@drawable/bg_rounded_search_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:layout_weight="0.9">
+                                    <Spinner android:id="@id/spnr_qtyMycart" android:padding="@dimen/dimen_5dp" android:layout_width="63.0dip" android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" app:cardCornerRadius="6.0dip" app:cardElevation="4.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/dimen_18sp" android:textColor="@color/color_3" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5dp" android:text="Price Details" android:fontFamily="sans-serif" />
+                    <View android:background="@color/colorGray" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="5.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_10dp">
+                        <TextView android:textSize="@dimen/dimen_16sp" android:textColor="@color/colorDarkGray" android:id="@+id/txt_price" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Price :" android:layout_weight="1.0" android:fontFamily="sans-serif" />
+                        <TextView android:textSize="@dimen/dimen_16sp" android:textColor="@color/black" android:id="@+id/txt_price1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Price" android:layout_weight="1.0" android:fontFamily="sans-serif" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_10dp">
+                        <TextView android:textSize="@dimen/dimen_16sp" android:textColor="@color/colorDarkGray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Delivery :" android:layout_weight="1.0" android:fontFamily="sans-serif" />
+                        <TextView android:textSize="@dimen/dimen_16sp" android:textColor="@color/black" android:id="@+id/txt_delivery" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Price" android:layout_weight="1.0" android:fontFamily="sans-serif" />
+                    </LinearLayout>
+                    <View android:background="@color/colorGray" android:layout_width="fill_parent" android:layout_height="0.5dp" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_10dp">
+                        <TextView android:textSize="@dimen/dimen_16sp" android:textColor="@color/colorBlack" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total Amt. payable :" android:layout_weight="1.0" android:fontFamily="sans-serif" />
+                        <TextView android:textSize="@dimen/dimen_16sp" android:textColor="@color/black" android:id="@+id/txt_amtPay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Price" android:layout_weight="1.0" android:fontFamily="sans-serif" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_20dp" android:layout_weight="1.0">
+                <Button android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold" android:textColor="@color/white" android:id="@+id/btn_cnt" android:background="@color/colorButtonRed" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="Continue" android:textAllCaps="true" android:fontFamily="sans-serif" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

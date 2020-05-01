@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindmingle.bookmybook.com.pavan.ecommerce.views.Home">
+
+    <item android:id="@+id/mycart"
+        android:title="@string/cart_title"
+        android:icon="@drawable/ic_cart"
+        app:showAsAction="ifRoom"/>
+
+   <!-- <item android:id="@+id/sort"
+        android:title="@string/cart_title"
+        android:icon="@drawable/ic_sort"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/nav_sort_by_name"
+                android:title="@string/sort_by_name" />
+            <item
+                android:id="@+id/nav_sort_by_price"
+                android:title="@string/sort_by_price" />
+            <item
+                android:id="@+id/nav_sort_by_rating"
+                android:title="@string/sort_by_rating" />
+        </menu>
+    </item>-->
+
+</menu>

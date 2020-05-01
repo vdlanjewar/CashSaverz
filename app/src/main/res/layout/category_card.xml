@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardCategoryDetails"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    card_view:cardBackgroundColor="@color/colorWhite"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="5dp"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tvCategorName"
+            android:background="@drawable/book_placeholder"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tvCategorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="Product"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

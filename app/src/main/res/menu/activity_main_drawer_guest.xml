@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_myaccount"
+            android:title="@string/my_account" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_order"
+            android:title="@string/my_order" />
+
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/wishlist_icon"
+            android:title="@string/my_wishlist" />
+
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_cart_black"
+            android:title="@string/my_cart" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_setting"
+            android:title="@string/nav_settings" />
+        <item
+            android:id="@+id/nav_browse_plans"
+            android:icon="@drawable/ic_membership"
+            android:title="@string/nav_browse_plans"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_payment_history"
+            android:icon="@drawable/payment_history"
+            android:title="@string/nav_payment_history" />
+        <item
+            android:id="@+id/nav_todays_delivery"
+            android:icon="@drawable/ic_todays_delivery"
+            android:title="@string/nav_todays_delivery" />
+        <item
+            android:id="@+id/nav_delivery_history"
+            android:icon="@drawable/delivery_history"
+            android:title="@string/nav_delivery_history" />
+        <item
+            android:id="@+id/nav_new_request_book_history"
+            android:icon="@drawable/ic_book_history"
+            android:title="@string/nav_requested_books_history"
+            android:visible="false"/>
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_login"
+                android:title="@string/nav_login" />
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="@string/nav_about_us" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:title="@string/privacy_policy" />
+            <item
+                android:id="@+id/nav_contact_us"
+                android:title="@string/contact_us" />
+            <item
+                android:id="@+id/nav_new_book_request"
+                android:title="@string/new_book_request"
+                android:visible="false"/>
+            <item
+                android:id="@+id/nav_terms_condition"
+                android:title="@string/terms_condition" />
+            <item
+                android:id="@+id/nav_exchange"
+                android:title="@string/exchange_of_old_books"
+                android:visible="false"/>
+            <item
+                android:id="@+id/nav_version"
+                android:title="@string/nav_version" />
+        </menu>
+    </item>
+
+</menu>

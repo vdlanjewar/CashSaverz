@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.PaymentActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack">
+        <ImageView
+            android:id="@+id/img_bck_pay"
+            android:layout_width="35dp"
+            android:layout_margin="5dp"
+            android:layout_height="@dimen/dimen_35dp"
+            android:src="@drawable/img_back_arrow"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:padding="@dimen/dimen_10dp"
+            android:textSize="@dimen/dimen_18dp"
+            android:text="Payment"
+            android:gravity="center_horizontal"/>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_10dp"
+        android:layout_margin="@dimen/dimen_10dp"
+        app:cardCornerRadius="6dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dimen_5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price Details :"
+                android:textSize="@dimen/dimen_18sp"
+                android:textColor="@color/colorDarkGray"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/dimen_10dp">
+
+                <TextView
+                    android:id="@+id/txt_pricePay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price :"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/color_3"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"/>
+                <TextView
+                    android:id="@+id/txt_pricePay1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/colorGray1"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/dimen_10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amt. payable :"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/color_3"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"/>
+                <TextView
+                    android:id="@+id/txt_amtPayNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/colorGray1"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/dimen_10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery :"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/color_3"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"/>
+                <TextView
+                    android:id="@+id/txt_deliveryPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/colorGray1"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dimen_10dp"
+        app:cardCornerRadius="6dp"
+        >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textStyle="bold"
+               android:fontFamily="sans-serif"
+               android:textSize="@dimen/dimen_16sp"
+               android:textColor="@color/color_3"
+               android:text="Payment Options :"/>
+            <RadioButton
+                android:id="@+id/rdo_payU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pay U Money"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/colorDarkGray"/>
+            <RadioButton
+                android:id="@+id/rdo_Cod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="COD"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/colorDarkGray"/>
+        </RadioGroup>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dimen_30dp">
+        <Button
+            android:id="@+id/btn_paymentdone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay Now"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/dimen_18sp"
+            android:background="@color/colorButtonRed"
+            />
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:visibility="gone"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_18sp"
+            android:background="@color/colorButtonRed"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

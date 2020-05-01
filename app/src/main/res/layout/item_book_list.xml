@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/product_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/colorWhite"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="3dp"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBookImage"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/elementMarginSmall"
+            android:scaleType="centerInside"
+            android:layout_alignBottom="@+id/llData"
+            android:layout_alignTop="@+id/llData"
+            android:src="@drawable/book_placeholder" />
+
+
+        <LinearLayout
+            android:id="@+id/llData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivBookImage"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorBrown"
+                android:textSize="@dimen/textSizeSmall" />
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:id="@+id/tvByAuthorName"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="xcxccvcvvvv"
+                   android:maxLines="1"
+                   android:layout_marginRight="2dp"
+                   android:textSize="12sp"
+                   android:textColor="@color/colorDarkGray" />
+
+               <TextView
+                   android:id="@+id/tvMrpPrice"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@id/tvByAuthorName"
+                   android:maxLines="1"
+                   android:layout_marginLeft="5dp"
+                   android:text="xcxcxc"
+
+                   android:textColor="@color/colorGray1"
+                   android:textSize="12sp" />
+
+           </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvPublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:textColor="@color/colorDarkGray"/>
+
+            <Button
+                android:id="@+id/btNotAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:clickable="false"
+                android:text="@string/not_available"
+                android:theme="@style/BrownButtonStyle" />
+
+            <LinearLayout
+                android:id="@+id/llButtonLayout"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btAddToCart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="@string/add_to_cart"
+                    android:visibility="gone"
+                    android:theme="@style/YellowButtonStyle" />
+                <Button
+                    android:id="@+id/btGoToMYcart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:text="@string/go_to_cart"
+                    android:theme="@style/YellowButtonStyle" />
+
+                <Button
+                    android:id="@+id/btRentNow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="@string/rent_now"
+                    android:visibility="visible"
+                    android:theme="@style/BrownButtonStyle" />
+<!--               <LinearLayout-->
+<!--                   android:layout_width="0dp"-->
+<!--                   android:layout_weight="1"-->
+<!--                   android:background="@drawable/bg_rounded_search_view"-->
+<!--                   android:layout_height="wrap_content">-->
+<!--                   <Spinner-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_height="wrap_content"/>-->
+<!--               </LinearLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

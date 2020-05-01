@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorGray">#EEEEEE</color>
+    <color name="colorYellow">#f9ca02</color>
+    <color name="colorBlue">#2874F0</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDarkGray">#5D5D5D</color>
+    <color name="colorLightGray">#757575</color>
+    <color name="colorGreen">#15AD95</color>
+    <color name="colorDrkGreen">#2BB673</color>
+    <color name="colorRed">#D46458</color>
+
+    <color name="colorBrown">#980001</color>
+    <color name="colorStar">#B69558</color>
+    <color name="colorButtonRed">#D90200</color>
+    <color name="colorLightOrange">#F18E00</color>
+    <color name="colorDarkOrange">#f07000</color>
+    <color name="colorLightBlue">#009FF1</color>
+    <color name="colorLightGreen">#74C72B</color>
+
+    <color name="blackTransparent">#99000000</color>
+    <color name="whiteTransparent">#26ffffff</color>
+    <color name="cardDisabled">#B3ffffff</color>
+    <color name="facebookBlue">#3B5998</color>
+
+    <color name="appbg">#2874F0</color>
+    <color name="hintcolor">#929191</color>
+    <color name="homerequest">#58B2C8</color>
+    <color name="homesend">#299699</color>
+    <color name="homesplit">#538CCD</color>
+    <color name="homelend">#149972</color>
+    <color name="pressed_color">#e5e5e5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="firstSignInUp">#2FA5A9</color>
+    <color name="secondSignInUp">#68BFD2</color>
+    <color name="thirdSignInUp">#649FD7</color>
+    <color name="fourthSignInUp">#01A785</color>
+    <color name="toggleColor">#33B5E5</color>
+    <color name="profile_selected">#FFB340</color>
+    <color name="colorGray1">#9197A3</color>
+    <color name="payumoney_black">#000000</color>
+</resources>

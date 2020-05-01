@@ -1,0 +1,86 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.essensys.cashsaverz"
+        minSdkVersion 20
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //resValue "string", "app_name", "Book My Book"
+            buildConfigField "String", "SERVER_IP", '"https://www.bookmybook.net/"'
+            buildConfigField "String", "SERVER_URL", '"https://www.bookmybook.net/web-app/"'
+        }
+        debug {
+            //resValue "string", "app_name", "Book My Book Debug"
+            buildConfigField "String", "SERVER_IP", '"http://52.41.183.204/"'
+            buildConfigField "String", "SERVER_URL", '"http://52.41.183.204/JB097/web-app/"'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0-beta01'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    // implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.juanlabrador:badgecounter:1.0.2@aar'
+    //wishlist button
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation 'com.facebook.android:facebook-login:4.36.0'
+    implementation 'com.mcxiaoke.viewpagerindicator:library:2.4.1@aar'
+    implementation 'com.github.GrenderG:Toasty:1.3.0'
+    // implementation 'com.payumoney.sdkui:plug-n-play:1.4.4'
+    implementation 'com.payumoney.sdkui:plug-n-play:1.6.0'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+        transitive = true;
+    }
+
+    implementation 'androidx.legacy:legacy-support-core-utils:1.0.0'
+}
